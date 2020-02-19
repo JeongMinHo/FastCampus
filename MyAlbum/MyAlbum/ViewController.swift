@@ -22,10 +22,19 @@ class ViewController: UIViewController {
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         
         alert.addAction(action)
-        
         present(alert, animated: true, completion: nil)
     }
-
     
+    @IBAction func newButton(_ sender: UIButton) {
+        
+        let alert  = UIAlertController(title: "새로운 버튼", message: "버튼 추가", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action2 = UIAlertAction(title: "NO", style: .default, handler: nil)
+        
+        
+        alert.addAction(action)
+        alert.addAction(action2)
+        present(alert, animated: true, completion: nil)
+    }
 }
 

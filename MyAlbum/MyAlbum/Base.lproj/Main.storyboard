@@ -23,6 +23,14 @@
                                     <action selector="connectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZgF-gc-kdu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r65-2V-kYQ">
+                                <rect key="frame" x="147" y="273" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Button"/>
+                                <connections>
+                                    <action selector="newButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5l7-HE-8p7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
