@@ -9,32 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var currentValue = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func connectButton(_ sender:  UIButton) {
+    @IBAction func showAlert(_ sender: Any) {
+        let message = "가격은 \(currentValue)입니다."
         
-        let alert = UIAlertController(title: "My First App!", message: "Start", preferredStyle: .alert)
-        
+        let alert = UIAlertController(title: "Hello", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-    }
-    
-    @IBAction func newButton(_ sender: UIButton) {
         
-        let alert  = UIAlertController(title: "새로운 버튼", message: "버튼 추가", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        let action2 = UIAlertAction(title: "NO", style: .default, handler: nil)
-        
-        
-        alert.addAction(action)
-        alert.addAction(action2)
-        present(alert, animated: true, completion: nil)
+        let randomPrice = arc4random_uniform(10000) + 1
+        currentValue = Int(randomPrice)
     }
 }
 
