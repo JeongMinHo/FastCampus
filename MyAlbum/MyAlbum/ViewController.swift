@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     func refresh() {
         let randomPrice = arc4random_uniform(10000) + 1
         currentValue = Int(randomPrice)
-        priceLabel.text = "W \(currentValue)"
+        priceLabel.text = "W \`(currentValue)"
     }
 }
 
