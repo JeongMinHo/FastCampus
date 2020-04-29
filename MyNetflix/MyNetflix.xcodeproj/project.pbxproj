@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E358B9AE2459EF5D008CEB0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E358B9AD2459EF5D008CEB0F /* Main.storyboard */; };
+		E358B9B02459FDC5008CEB0F /* AppTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */; };
 		E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890922456C5E100DAACAB /* AppDelegate.swift */; };
 		E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890942456C5E100DAACAB /* SceneDelegate.swift */; };
-		E38890972456C5E100DAACAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890962456C5E100DAACAB /* ViewController.swift */; };
-		E388909A2456C5E100DAACAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38890982456C5E100DAACAB /* Main.storyboard */; };
 		E388909C2456C5E300DAACAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E388909B2456C5E300DAACAB /* Assets.xcassets */; };
 		E388909F2456C5E300DAACAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E388909D2456C5E300DAACAB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E358B9AD2459EF5D008CEB0F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabbarController.swift; sourceTree = "<group>"; };
 		E388908F2456C5E100DAACAB /* MyNetflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNetflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38890922456C5E100DAACAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38890942456C5E100DAACAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E38890962456C5E100DAACAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E38890992456C5E100DAACAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E388909B2456C5E300DAACAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E388909E2456C5E300DAACAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E38890A02456C5E300DAACAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +37,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E358B9AA2459EEB9008CEB0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E38890942456C5E100DAACAB /* SceneDelegate.swift */,
+				E38890922456C5E100DAACAB /* AppDelegate.swift */,
+				E38890A02456C5E300DAACAB /* Info.plist */,
+				E388909B2456C5E300DAACAB /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E358B9AB2459EEBB008CEB0F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E358B9AC2459EF3F008CEB0F /* Main */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E358B9AC2459EF3F008CEB0F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E358B9AD2459EF5D008CEB0F /* Main.storyboard */,
+				E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		E38890862456C5E100DAACAB = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +84,9 @@
 		E38890912456C5E100DAACAB /* MyNetflix */ = {
 			isa = PBXGroup;
 			children = (
-				E38890922456C5E100DAACAB /* AppDelegate.swift */,
-				E38890942456C5E100DAACAB /* SceneDelegate.swift */,
-				E38890962456C5E100DAACAB /* ViewController.swift */,
-				E38890982456C5E100DAACAB /* Main.storyboard */,
-				E388909B2456C5E300DAACAB /* Assets.xcassets */,
+				E358B9AB2459EEBB008CEB0F /* Sources */,
+				E358B9AA2459EEB9008CEB0F /* Supporting Files */,
 				E388909D2456C5E300DAACAB /* LaunchScreen.storyboard */,
-				E38890A02456C5E300DAACAB /* Info.plist */,
 			);
 			path = MyNetflix;
 			sourceTree = "<group>";
@@ -125,9 +149,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E358B9AE2459EF5D008CEB0F /* Main.storyboard in Resources */,
 				E388909F2456C5E300DAACAB /* LaunchScreen.storyboard in Resources */,
 				E388909C2456C5E300DAACAB /* Assets.xcassets in Resources */,
-				E388909A2456C5E100DAACAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E38890972456C5E100DAACAB /* ViewController.swift in Sources */,
+				E358B9B02459FDC5008CEB0F /* AppTabbarController.swift in Sources */,
 				E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */,
 				E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E38890982456C5E100DAACAB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E38890992456C5E100DAACAB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E388909D2456C5E300DAACAB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
