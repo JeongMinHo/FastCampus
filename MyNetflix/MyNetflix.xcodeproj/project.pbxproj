@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E358B9AE2459EF5D008CEB0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E358B9AD2459EF5D008CEB0F /* Main.storyboard */; };
 		E358B9B02459FDC5008CEB0F /* AppTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */; };
+		E358B9B32459FFE6008CEB0F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E358B9B22459FFE6008CEB0F /* Search.storyboard */; };
+		E358B9B5245A0002008CEB0F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9B4245A0002008CEB0F /* SearchViewController.swift */; };
 		E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890922456C5E100DAACAB /* AppDelegate.swift */; };
 		E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890942456C5E100DAACAB /* SceneDelegate.swift */; };
 		E388909C2456C5E300DAACAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E388909B2456C5E300DAACAB /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		E358B9AD2459EF5D008CEB0F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabbarController.swift; sourceTree = "<group>"; };
+		E358B9B22459FFE6008CEB0F /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		E358B9B4245A0002008CEB0F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E388908F2456C5E100DAACAB /* MyNetflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNetflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38890922456C5E100DAACAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38890942456C5E100DAACAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +46,6 @@
 			children = (
 				E38890942456C5E100DAACAB /* SceneDelegate.swift */,
 				E38890922456C5E100DAACAB /* AppDelegate.swift */,
-				E38890A02456C5E300DAACAB /* Info.plist */,
 				E388909B2456C5E300DAACAB /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -51,6 +54,7 @@
 		E358B9AB2459EEBB008CEB0F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E358B9B12459FFD9008CEB0F /* Search */,
 				E358B9AC2459EF3F008CEB0F /* Main */,
 			);
 			path = Sources;
@@ -63,6 +67,15 @@
 				E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		E358B9B12459FFD9008CEB0F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E358B9B22459FFE6008CEB0F /* Search.storyboard */,
+				E358B9B4245A0002008CEB0F /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		E38890862456C5E100DAACAB = {
@@ -87,6 +100,7 @@
 				E358B9AB2459EEBB008CEB0F /* Sources */,
 				E358B9AA2459EEB9008CEB0F /* Supporting Files */,
 				E388909D2456C5E300DAACAB /* LaunchScreen.storyboard */,
+				E38890A02456C5E300DAACAB /* Info.plist */,
 			);
 			path = MyNetflix;
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 			files = (
 				E358B9AE2459EF5D008CEB0F /* Main.storyboard in Resources */,
 				E388909F2456C5E300DAACAB /* LaunchScreen.storyboard in Resources */,
+				E358B9B32459FFE6008CEB0F /* Search.storyboard in Resources */,
 				E388909C2456C5E300DAACAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +179,7 @@
 			files = (
 				E358B9B02459FDC5008CEB0F /* AppTabbarController.swift in Sources */,
 				E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */,
+				E358B9B5245A0002008CEB0F /* SearchViewController.swift in Sources */,
 				E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -286,6 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
