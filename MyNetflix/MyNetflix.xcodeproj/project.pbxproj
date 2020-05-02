@@ -11,6 +11,9 @@
 		E358B9B02459FDC5008CEB0F /* AppTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */; };
 		E358B9B32459FFE6008CEB0F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E358B9B22459FFE6008CEB0F /* Search.storyboard */; };
 		E358B9B5245A0002008CEB0F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9B4245A0002008CEB0F /* SearchViewController.swift */; };
+		E358B9B7245DE571008CEB0F /* RecommendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9B6245DE571008CEB0F /* RecommendListViewController.swift */; };
+		E358B9B9245DF109008CEB0F /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9B8245DF109008CEB0F /* RecommendCell.swift */; };
+		E358B9BB245DF3AE008CEB0F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9BA245DF3AE008CEB0F /* HomeViewController.swift */; };
 		E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890922456C5E100DAACAB /* AppDelegate.swift */; };
 		E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890942456C5E100DAACAB /* SceneDelegate.swift */; };
 		E388909C2456C5E300DAACAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E388909B2456C5E300DAACAB /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 		E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabbarController.swift; sourceTree = "<group>"; };
 		E358B9B22459FFE6008CEB0F /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		E358B9B4245A0002008CEB0F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E358B9B6245DE571008CEB0F /* RecommendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendListViewController.swift; sourceTree = "<group>"; };
+		E358B9B8245DF109008CEB0F /* RecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
+		E358B9BA245DF3AE008CEB0F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E388908F2456C5E100DAACAB /* MyNetflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNetflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38890922456C5E100DAACAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38890942456C5E100DAACAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				E358B9AD2459EF5D008CEB0F /* Main.storyboard */,
+				E358B9BA245DF3AE008CEB0F /* HomeViewController.swift */,
 				E358B9AF2459FDC5008CEB0F /* AppTabbarController.swift */,
+				E358B9B6245DE571008CEB0F /* RecommendListViewController.swift */,
+				E358B9B8245DF109008CEB0F /* RecommendCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -180,6 +189,9 @@
 				E358B9B02459FDC5008CEB0F /* AppTabbarController.swift in Sources */,
 				E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */,
 				E358B9B5245A0002008CEB0F /* SearchViewController.swift in Sources */,
+				E358B9B7245DE571008CEB0F /* RecommendListViewController.swift in Sources */,
+				E358B9B9245DF109008CEB0F /* RecommendCell.swift in Sources */,
+				E358B9BB245DF3AE008CEB0F /* HomeViewController.swift in Sources */,
 				E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
