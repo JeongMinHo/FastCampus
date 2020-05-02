@@ -42,6 +42,10 @@ extension RecommendListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let dequeued = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         guard let cell = dequeued as? RecommendCell else { return dequeued }
+        
+        let movie = viewModel.item(at: indexPath.item)
+        cell.updateUI(movie: movie)
+        
         return cell
     }
 }
