@@ -22,13 +22,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Th0-f4-cR4">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="497"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_header" translatesAutoresizingMaskIntoConstraints="NO" id="maG-wH-tCW">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="497"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="maG-wH-tCW" secondAttribute="height" multiplier="40:48" id="I6B-Zs-dvU"/>
-                                                </constraints>
-                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1K-BR-evV">
                                                 <rect key="frame" x="147" y="447" width="120" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,6 +58,13 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                                 </state>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_header" translatesAutoresizingMaskIntoConstraints="NO" id="maG-wH-tCW">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="497"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="maG-wH-tCW" secondAttribute="height" multiplier="40:48" id="I6B-Zs-dvU"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -115,11 +115,11 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vF9-dH-npU" secondAttribute="trailing" id="7bU-2k-zdL"/>
-                                    <constraint firstItem="Th0-f4-cR4" firstAttribute="width" secondItem="PGT-cj-PMG" secondAttribute="width" id="9HY-nE-3Ws"/>
-                                    <constraint firstAttribute="bottom" secondItem="Th0-f4-cR4" secondAttribute="bottom" id="EVx-3q-5IO"/>
+                                    <constraint firstItem="vF9-dH-npU" firstAttribute="bottom" secondItem="Th0-f4-cR4" secondAttribute="bottom" constant="620" id="EVx-3q-5IO"/>
                                     <constraint firstItem="Th0-f4-cR4" firstAttribute="top" secondItem="PGT-cj-PMG" secondAttribute="top" id="GN1-Ii-wJi"/>
                                     <constraint firstItem="Th0-f4-cR4" firstAttribute="leading" secondItem="PGT-cj-PMG" secondAttribute="leading" id="WAc-IW-N6i"/>
                                     <constraint firstItem="vF9-dH-npU" firstAttribute="top" secondItem="Th0-f4-cR4" secondAttribute="bottom" constant="20" id="X6T-df-72e"/>
+                                    <constraint firstAttribute="bottom" secondItem="vF9-dH-npU" secondAttribute="bottom" id="lWO-dn-kbp"/>
                                     <constraint firstItem="vF9-dH-npU" firstAttribute="leading" secondItem="PGT-cj-PMG" secondAttribute="leading" id="lbd-7d-HAs"/>
                                     <constraint firstAttribute="trailing" secondItem="Th0-f4-cR4" secondAttribute="trailing" id="mV1-yH-tW9"/>
                                 </constraints>
@@ -127,6 +127,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="Th0-f4-cR4" secondAttribute="width" id="LUw-k3-dru"/>
                             <constraint firstItem="PGT-cj-PMG" firstAttribute="top" secondItem="ucs-um-5am" secondAttribute="top" id="lYE-aa-4DS"/>
                             <constraint firstItem="PGT-cj-PMG" firstAttribute="trailing" secondItem="5gv-30-NFx" secondAttribute="trailing" id="oZu-o7-1eS"/>
                             <constraint firstItem="PGT-cj-PMG" firstAttribute="leading" secondItem="5gv-30-NFx" secondAttribute="leading" id="wyA-at-bbv"/>

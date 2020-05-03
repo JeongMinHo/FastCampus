@@ -67,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E358B9AC2459EF3F008CEB0F /* Main */,
+				E358B9BC245E0138008CEB0F /* Player */,
 				E358B9B12459FFD9008CEB0F /* Search */,
 			);
 			path = Sources;
@@ -100,7 +101,8 @@
 				E358B9BF245E0158008CEB0F /* PlayerViewController.swift */,
 				E358B9C1245E0163008CEB0F /* PlayerView.swift */,
 			);
-			path = Player;
+			name = Player;
+			path = ../Player;
 			sourceTree = "<group>";
 		};
 		E38890862456C5E100DAACAB = {
@@ -123,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				E358B9AB2459EEBB008CEB0F /* Sources */,
-				E358B9BC245E0138008CEB0F /* Player */,
 				E358B9AA2459EEB9008CEB0F /* Supporting Files */,
 				E388909D2456C5E300DAACAB /* LaunchScreen.storyboard */,
 				E38890A02456C5E300DAACAB /* Info.plist */,
