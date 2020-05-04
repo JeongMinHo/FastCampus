@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchViewController: UIViewController {
 
@@ -38,8 +39,7 @@ extension SearchViewController: UISearchBarDelegate {
         
         // 검색 API
         SearchAPI.search(searchTerm) { movies in
-            
-            print(movies.count)
+        
             // collectionView로 표현
             DispatchQueue.main.async {
                 self.movies = movies
@@ -116,9 +116,10 @@ extension SearchViewController: UICollectionViewDataSource {
         let dequeued = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         guard let cell = dequeued as? ResultCell else { return dequeued }
 
-        
         let movie = movies[indexPath.item]
-//        cell.thumbnailImage.image = movie.thumbnailPath
+        guard let url = URL(string: movie.thumbnailPath) else { return UICollectionViewCell() }
+        
+        cell.movieThumbnail.kf.setImage(with: url)
         
         return cell
     }
