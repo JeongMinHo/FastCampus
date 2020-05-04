@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,23 +16,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="검색화면입니당" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKr-Xj-MYb">
-                                <rect key="frame" x="186" y="387" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nzt-Md-ozU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Zoo-eC-zq3" id="VRk-by-DDo"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="giz-uC-M1C">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dsI-Vl-lPw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResultCell" id="reb-p1-PRR" customClass="ResultCell" customModule="MyNetflix" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S4F-kb-3oi">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zye-IY-wfd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Zye-IY-wfd" secondAttribute="trailing" id="GtZ-xW-daH"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zye-IY-wfd" secondAttribute="bottom" id="hVE-4k-k8x"/>
+                                                <constraint firstItem="Zye-IY-wfd" firstAttribute="top" secondItem="S4F-kb-3oi" secondAttribute="top" id="oq6-Z4-xk9"/>
+                                                <constraint firstItem="Zye-IY-wfd" firstAttribute="leading" secondItem="S4F-kb-3oi" secondAttribute="leading" id="yhC-vt-vtw"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieThumbnail" destination="Zye-IY-wfd" id="0eT-Mz-Nx0"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zoo-eC-zq3" id="ppS-5e-vif"/>
+                                    <outlet property="delegate" destination="Zoo-eC-zq3" id="Nl6-o8-1NA"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="giz-uC-M1C" firstAttribute="leading" secondItem="31s-OW-i2m" secondAttribute="leading" id="7uK-Qr-KgO"/>
+                            <constraint firstItem="nzt-Md-ozU" firstAttribute="trailing" secondItem="31s-OW-i2m" secondAttribute="trailing" id="Ai5-Sk-kph"/>
+                            <constraint firstItem="nzt-Md-ozU" firstAttribute="leading" secondItem="31s-OW-i2m" secondAttribute="leading" id="JwK-KO-IzR"/>
+                            <constraint firstItem="nzt-Md-ozU" firstAttribute="top" secondItem="31s-OW-i2m" secondAttribute="top" id="Nbk-Ju-0fJ"/>
+                            <constraint firstItem="giz-uC-M1C" firstAttribute="top" secondItem="nzt-Md-ozU" secondAttribute="bottom" id="dme-CX-CyD"/>
+                            <constraint firstItem="31s-OW-i2m" firstAttribute="trailing" secondItem="giz-uC-M1C" secondAttribute="trailing" id="fQP-Fj-3Dc"/>
+                            <constraint firstItem="31s-OW-i2m" firstAttribute="bottom" secondItem="giz-uC-M1C" secondAttribute="bottom" id="zcv-OH-rrG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="31s-OW-i2m"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass" catalog="system" id="5OQ-ar-yUC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="resultCollectionView" destination="giz-uC-M1C" id="ePE-cL-k0D"/>
+                        <outlet property="searchBar" destination="nzt-Md-ozU" id="roJ-vA-xeL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEG-rj-Z1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259" y="-206"/>
+            <point key="canvasLocation" x="257.97101449275362" y="-206.25"/>
         </scene>
     </scenes>
     <resources>

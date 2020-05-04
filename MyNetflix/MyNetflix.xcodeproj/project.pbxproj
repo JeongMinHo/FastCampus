@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		E358B9BE245E014C008CEB0F /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E358B9BD245E014C008CEB0F /* Player.storyboard */; };
 		E358B9C0245E0158008CEB0F /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9BF245E0158008CEB0F /* PlayerViewController.swift */; };
 		E358B9C2245E0163008CEB0F /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9C1245E0163008CEB0F /* PlayerView.swift */; };
+		E358B9C424607E3D008CEB0F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9C324607E3D008CEB0F /* Movie.swift */; };
+		E358B9C624607E62008CEB0F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9C524607E62008CEB0F /* Response.swift */; };
+		E358B9C824608BE3008CEB0F /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9C724608BE3008CEB0F /* ResultCell.swift */; };
+		E358B9CB2460985C008CEB0F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E358B9CA2460985C008CEB0F /* Kingfisher */; };
 		E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890922456C5E100DAACAB /* AppDelegate.swift */; };
 		E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890942456C5E100DAACAB /* SceneDelegate.swift */; };
 		E388909C2456C5E300DAACAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E388909B2456C5E300DAACAB /* Assets.xcassets */; };
@@ -34,6 +38,9 @@
 		E358B9BD245E014C008CEB0F /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		E358B9BF245E0158008CEB0F /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		E358B9C1245E0163008CEB0F /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		E358B9C324607E3D008CEB0F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E358B9C524607E62008CEB0F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		E358B9C724608BE3008CEB0F /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		E388908F2456C5E100DAACAB /* MyNetflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNetflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38890922456C5E100DAACAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38890942456C5E100DAACAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E358B9CB2460985C008CEB0F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				E358B9AC2459EF3F008CEB0F /* Main */,
+				E358B9BC245E0138008CEB0F /* Player */,
 				E358B9B12459FFD9008CEB0F /* Search */,
 			);
 			path = Sources;
@@ -89,6 +98,9 @@
 			children = (
 				E358B9B22459FFE6008CEB0F /* Search.storyboard */,
 				E358B9B4245A0002008CEB0F /* SearchViewController.swift */,
+				E358B9C524607E62008CEB0F /* Response.swift */,
+				E358B9C324607E3D008CEB0F /* Movie.swift */,
+				E358B9C724608BE3008CEB0F /* ResultCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -100,7 +112,8 @@
 				E358B9BF245E0158008CEB0F /* PlayerViewController.swift */,
 				E358B9C1245E0163008CEB0F /* PlayerView.swift */,
 			);
-			path = Player;
+			name = Player;
+			path = ../Player;
 			sourceTree = "<group>";
 		};
 		E38890862456C5E100DAACAB = {
@@ -123,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				E358B9AB2459EEBB008CEB0F /* Sources */,
-				E358B9BC245E0138008CEB0F /* Player */,
 				E358B9AA2459EEB9008CEB0F /* Supporting Files */,
 				E388909D2456C5E300DAACAB /* LaunchScreen.storyboard */,
 				E38890A02456C5E300DAACAB /* Info.plist */,
@@ -147,6 +159,9 @@
 			dependencies = (
 			);
 			name = MyNetflix;
+			packageProductDependencies = (
+				E358B9CA2460985C008CEB0F /* Kingfisher */,
+			);
 			productName = MyNetflix;
 			productReference = E388908F2456C5E100DAACAB /* MyNetflix.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +190,9 @@
 				Base,
 			);
 			mainGroup = E38890862456C5E100DAACAB;
+			packageReferences = (
+				E358B9C92460985C008CEB0F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E38890902456C5E100DAACAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,10 +224,13 @@
 			files = (
 				E358B9C2245E0163008CEB0F /* PlayerView.swift in Sources */,
 				E358B9B02459FDC5008CEB0F /* AppTabbarController.swift in Sources */,
+				E358B9C824608BE3008CEB0F /* ResultCell.swift in Sources */,
 				E358B9C0245E0158008CEB0F /* PlayerViewController.swift in Sources */,
 				E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */,
+				E358B9C424607E3D008CEB0F /* Movie.swift in Sources */,
 				E358B9B5245A0002008CEB0F /* SearchViewController.swift in Sources */,
 				E358B9B7245DE571008CEB0F /* RecommendListViewController.swift in Sources */,
+				E358B9C624607E62008CEB0F /* Response.swift in Sources */,
 				E358B9B9245DF109008CEB0F /* RecommendCell.swift in Sources */,
 				E358B9BB245DF3AE008CEB0F /* HomeViewController.swift in Sources */,
 				E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */,
@@ -404,6 +425,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E358B9C92460985C008CEB0F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E358B9CA2460985C008CEB0F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E358B9C92460985C008CEB0F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E38890872456C5E100DAACAB /* Project object */;
 }
