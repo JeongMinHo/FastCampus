@@ -14,6 +14,10 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultCollectionView: UICollectionView!
     
+    // MARK: - Value
+    var movies: [Movie] = []
+    var cellIdentifier: String = "ResultCell"
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +40,8 @@ extension SearchViewController: UISearchBarDelegate {
         SearchAPI.search(searchTerm) { movies in
             
             // collectionView로 표현
-            print("--> 몇 개 : \(movies.count)")
+            self.movies = movies
+            self.resultCollectionView.reloadData()
         }
     }
 }
@@ -97,28 +102,43 @@ class SearchAPI {
     }
 }
 
-// Movie 객체, Response 객체
-struct Movie: Codable {
-    let title: String
-    let director: String
-    let thumbnailPath: String
-    let previewURL: String
+// MARK: - UICollecionViewDataSource
+extension SearchViewController: UICollectionViewDataSource {
     
-    enum CodingKeys: String, CodingKey {
-        case title = "trackName"
-        case director = "artistName"
-        case thumbnailPath = "artworkUrl100"
-        case previewURL = "previewUrl"
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let dequeued = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+        guard let cell = dequeued as? RecommendCell else { return dequeued }
+        
+        cell.backgroundColor = UIColor.red
+        
+        return cell
+    }
+    
+    
+    
 }
 
-struct Response: Codable {
-    let resultCount: Int
-    let movies: [Movie]
+// MARK: - UICollectionViewDelegate
+extension SearchViewController: UICollectionViewDelegate {
     
-    enum CodingKeys: String, CodingKey {
-        case resultCount
-        case movies = "results"
-    }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
+extension SearchViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let margin: CGFloat = 8
+        let itemSpacing: CGFloat = 10
+        
+        let width = (collectionView.bounds.width - margin * 2 - itemSpacing * 2) / 3
+        let height = width * 10 / 7
+        
+        return CGSize(width: width, height: height)
+    }
+}
