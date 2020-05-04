@@ -39,9 +39,12 @@ extension SearchViewController: UISearchBarDelegate {
         // 검색 API
         SearchAPI.search(searchTerm) { movies in
             
+            print(movies.count)
             // collectionView로 표현
-            self.movies = movies
-            self.resultCollectionView.reloadData()
+            DispatchQueue.main.async {
+                self.movies = movies
+                self.resultCollectionView.reloadData()
+            }
         }
     }
 }
@@ -83,7 +86,6 @@ class SearchAPI {
             
             let movies = SearchAPI.parseMovies(resultData)
             completion(movies)
-            print(movies.count)
         }
         dataTask.resume()
     }
@@ -112,15 +114,14 @@ extension SearchViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let dequeued = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
-        guard let cell = dequeued as? RecommendCell else { return dequeued }
+        guard let cell = dequeued as? ResultCell else { return dequeued }
+
         
-        cell.backgroundColor = UIColor.red
+        let movie = movies[indexPath.item]
+//        cell.thumbnailImage.image = movie.thumbnailPath
         
         return cell
     }
-    
-    
-    
 }
 
 // MARK: - UICollectionViewDelegate
