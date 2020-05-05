@@ -22,26 +22,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUw-VU-pAJ">
                                 <rect key="frame" x="44" y="0.0" width="800" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-XE-V4E">
-                                        <rect key="frame" x="380" y="187" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="0FL-as-8CG"/>
-                                            <constraint firstAttribute="height" constant="40" id="9gg-sp-CgB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="play.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
-                                        </state>
-                                        <state key="selected" image="pause.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playButtonTouchUpInside:" destination="nXJ-2T-0SC" eventType="touchUpInside" id="4FF-04-O5M"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKX-Vr-KJZ">
-                                        <rect key="frame" x="740" y="20" width="40" height="40"/>
+                                        <rect key="frame" x="740" y="16" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Vmf-h7-Pfr"/>
                                             <constraint firstAttribute="height" constant="40" id="ktg-X4-PHA"/>
@@ -52,14 +34,30 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                         </state>
                                         <connections>
-                                            <action selector="closeButtonTouchUpInside:" destination="nXJ-2T-0SC" eventType="touchUpInside" id="yhc-0y-rTo"/>
+                                            <action selector="closeButtonTouchUpInside:" destination="nXJ-2T-0SC" eventType="touchUpInside" id="uWe-QY-pfB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-XE-V4E">
+                                        <rect key="frame" x="380" y="187" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="0FL-as-8CG"/>
+                                            <constraint firstAttribute="height" constant="40" id="9gg-sp-CgB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="pause.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                        </state>
+                                        <state key="selected" image="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playButtonTouchUpInside:" destination="nXJ-2T-0SC" eventType="touchUpInside" id="q4j-1E-jOh"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Mfi-XE-V4E" firstAttribute="centerY" secondItem="aUw-VU-pAJ" secondAttribute="centerY" id="3NI-Ic-BLJ"/>
-                                    <constraint firstItem="XKX-Vr-KJZ" firstAttribute="top" secondItem="aUw-VU-pAJ" secondAttribute="top" constant="20" id="7sb-4N-2vV"/>
+                                    <constraint firstItem="XKX-Vr-KJZ" firstAttribute="top" secondItem="aUw-VU-pAJ" secondAttribute="top" constant="16" id="7sb-4N-2vV"/>
                                     <constraint firstAttribute="trailing" secondItem="XKX-Vr-KJZ" secondAttribute="trailing" constant="20" id="I0c-Tg-uAr"/>
                                     <constraint firstItem="Mfi-XE-V4E" firstAttribute="centerX" secondItem="aUw-VU-pAJ" secondAttribute="centerX" id="hu7-Ue-5kq"/>
                                 </constraints>
@@ -80,7 +78,7 @@
                     </view>
                     <connections>
                         <outlet property="controlView" destination="aUw-VU-pAJ" id="vDl-DS-hDy"/>
-                        <outlet property="playButton" destination="Mfi-XE-V4E" id="zhs-Nt-CZf"/>
+                        <outlet property="playButton" destination="Mfi-XE-V4E" id="qgU-b3-0xm"/>
                         <outlet property="playerView" destination="Maw-QF-eG9" id="XXN-E3-bQ9"/>
                     </connections>
                 </viewController>
