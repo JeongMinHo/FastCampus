@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import AVFoundation
 
 class SearchViewController: UIViewController {
 
@@ -128,6 +129,20 @@ extension SearchViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension SearchViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let movie = movies[indexPath.item]
+        guard let url = URL(string: movie.previewURL) else { return }
+        let item = AVPlayerItem(url: url)
+        
+        let storyBoard = UIStoryboard(name: "Player", bundle: nil)
+        guard let VC = storyBoard.instantiateViewController(identifier: "Player") as? PlayerViewController else { return }
+        VC.modalPresentationStyle = .overFullScreen
+        
+        VC.player.replaceCurrentItem(with: item)
+        
+        present(VC, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
