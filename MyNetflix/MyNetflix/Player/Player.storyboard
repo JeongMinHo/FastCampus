@@ -48,7 +48,9 @@
                                         <state key="normal" image="pause.fill" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                         </state>
-                                        <state key="selected" image="play.fill" catalog="system"/>
+                                        <state key="selected" image="play.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                        </state>
                                         <connections>
                                             <action selector="playButtonTouchUpInside:" destination="nXJ-2T-0SC" eventType="touchUpInside" id="q4j-1E-jOh"/>
                                         </connections>

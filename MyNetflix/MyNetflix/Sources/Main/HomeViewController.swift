@@ -7,8 +7,30 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomeViewController: UIViewController {
+    
+    // MARK: - IBAction
+    @IBAction func playButtonTouchUpInside(_ sender: UIButton) {
+        
+        SearchAPI.search("Avengers") { movies in
+            guard let interstella = movies.first else { return }
+            
+            DispatchQueue.main.async {
+                guard let url = URL(string: interstella.previewURL) else { return }
+                
+                let item = AVPlayerItem(url: url)
+                
+                let storyboard = UIStoryboard(name: "Player", bundle: nil)
+                guard let VC = storyboard.instantiateViewController(identifier: "Player") as? PlayerViewController else { return }
+                VC.modalPresentationStyle = .fullScreen
+                VC.player.replaceCurrentItem(with: item)
+                self.present(VC, animated: true, completion: nil)
+            }
+        }
+    }
+    
     
     // MARK: - Value
     var awardRecommendListViewController: RecommendListViewController!
