@@ -128,6 +128,16 @@ extension SearchViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension SearchViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let movie = movies[indexPath.item]
+        
+        let storyBoard = UIStoryboard(name: "Player", bundle: nil)
+        guard let VC = storyBoard.instantiateViewController(identifier: "Player") as? PlayerViewController else { return }
+        VC.modalPresentationStyle = .overFullScreen
+        
+        present(VC, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

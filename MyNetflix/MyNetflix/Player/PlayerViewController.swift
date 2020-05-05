@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlayerViewController: UIViewController {
     
+    // MARK: - IBOutlet
+    @IBOutlet weak var playerView: PlayerView!
+    @IBOutlet weak var controlView: UIView!
+    @IBOutlet weak var playButton: UIButton!
+    
     // MARK: - IBAction
-    @IBAction func closeButtonTapped(_ sender: UIButton) {
+    @IBAction func playButtonTouchUpInside(_ sender: UIButton) {
+        playButton.isSelected.toggle()
+    }
+    
+    @IBAction func closeButtonTouchUpInside(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Value
+    let player = AVPlayer()
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscapeRight
     }
     
 }
