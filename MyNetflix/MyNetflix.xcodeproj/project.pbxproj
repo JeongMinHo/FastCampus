@@ -21,6 +21,7 @@
 		E358B9C624607E62008CEB0F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9C524607E62008CEB0F /* Response.swift */; };
 		E358B9C824608BE3008CEB0F /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B9C724608BE3008CEB0F /* ResultCell.swift */; };
 		E358B9CB2460985C008CEB0F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E358B9CA2460985C008CEB0F /* Kingfisher */; };
+		E35B61EA24685DA1006849D5 /* NoResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35B61E924685DA1006849D5 /* NoResultViewController.swift */; };
 		E38890932456C5E100DAACAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890922456C5E100DAACAB /* AppDelegate.swift */; };
 		E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38890942456C5E100DAACAB /* SceneDelegate.swift */; };
 		E388909C2456C5E300DAACAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E388909B2456C5E300DAACAB /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		E358B9C324607E3D008CEB0F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E358B9C524607E62008CEB0F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		E358B9C724608BE3008CEB0F /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		E35B61E924685DA1006849D5 /* NoResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultViewController.swift; sourceTree = "<group>"; };
 		E388908F2456C5E100DAACAB /* MyNetflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNetflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38890922456C5E100DAACAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38890942456C5E100DAACAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E358B9B22459FFE6008CEB0F /* Search.storyboard */,
+				E35B61E924685DA1006849D5 /* NoResultViewController.swift */,
 				E358B9B4245A0002008CEB0F /* SearchViewController.swift */,
 				E358B9C524607E62008CEB0F /* Response.swift */,
 				E358B9C324607E3D008CEB0F /* Movie.swift */,
@@ -232,6 +235,7 @@
 				E358B9B7245DE571008CEB0F /* RecommendListViewController.swift in Sources */,
 				E358B9C624607E62008CEB0F /* Response.swift in Sources */,
 				E358B9B9245DF109008CEB0F /* RecommendCell.swift in Sources */,
+				E35B61EA24685DA1006849D5 /* NoResultViewController.swift in Sources */,
 				E358B9BB245DF3AE008CEB0F /* HomeViewController.swift in Sources */,
 				E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */,
 			);

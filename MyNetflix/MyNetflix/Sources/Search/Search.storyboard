@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nzt-Md-ozU">
+                            <searchBar contentMode="redraw" placeholder="영상 검색하기" translatesAutoresizingMaskIntoConstraints="NO" id="nzt-Md-ozU">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -32,6 +32,13 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="yTQ-EW-2nU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="713"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <connections>
+                                        <segue destination="85i-Fy-zMe" kind="embed" id="dGA-Ku-tal"/>
+                                    </connections>
+                                </containerView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResultCell" id="reb-p1-PRR" customClass="ResultCell" customModule="MyNetflix" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="128" height="128"/>
@@ -84,6 +91,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEG-rj-Z1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="257.97101449275362" y="-206.25"/>
+        </scene>
+        <!--No Result View Controller-->
+        <scene sceneID="Q1y-S9-r7q">
+            <objects>
+                <viewController id="85i-Fy-zMe" customClass="NoResultViewController" customModule="MyNetflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ndk-TZ-1kn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="713"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpA-ZN-DJQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색어와 일치하는 결과가 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KX0-7F-vqY">
+                                <rect key="frame" x="88" y="346" width="238.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jpA-ZN-DJQ" secondAttribute="bottom" id="2Ui-y8-DID"/>
+                            <constraint firstItem="KX0-7F-vqY" firstAttribute="centerY" secondItem="Ndk-TZ-1kn" secondAttribute="centerY" id="5vb-f2-FXg"/>
+                            <constraint firstItem="jpA-ZN-DJQ" firstAttribute="top" secondItem="Ndk-TZ-1kn" secondAttribute="top" id="LBE-bW-jTd"/>
+                            <constraint firstItem="jpA-ZN-DJQ" firstAttribute="leading" secondItem="Ndk-TZ-1kn" secondAttribute="leading" id="heO-ER-tI8"/>
+                            <constraint firstAttribute="trailing" secondItem="jpA-ZN-DJQ" secondAttribute="trailing" id="krh-Ty-tZi"/>
+                            <constraint firstItem="KX0-7F-vqY" firstAttribute="centerX" secondItem="Ndk-TZ-1kn" secondAttribute="centerX" id="lqT-rj-wuY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dimmedView" destination="jpA-ZN-DJQ" id="Zct-q0-2H2"/>
+                        <outlet property="noResultText" destination="KX0-7F-vqY" id="DLc-Ic-MfH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Gm-K0-6yV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134.7826086956522" y="-205.91517857142856"/>
         </scene>
     </scenes>
     <resources>
