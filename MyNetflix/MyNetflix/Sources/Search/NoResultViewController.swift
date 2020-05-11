@@ -12,19 +12,12 @@ class NoResultViewController: UIViewController {
     
     // MARK: - IBOutlet
     @IBOutlet weak var dimmedView: UIView!
-    @IBOutlet weak var noResultText: UILabel!
-    
-    // MARK: - Method
-    func animateDimmedView() {
-        UIView.animate(withDuration: 1) { [weak self] in
-            self?.dimmedView.alpha = 1
-        }
-    }
+    @IBOutlet var noResultText: UILabel!
     
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animateDimmedView()
+        noResultText.isHidden = true
     }
 }

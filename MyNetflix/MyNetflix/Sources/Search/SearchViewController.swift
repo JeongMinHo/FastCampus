@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultCollectionView: UICollectionView!
+    @IBOutlet weak var noResultLabel: UILabel!
     
     // MARK: - Value
     var movies: [Movie] = []
@@ -23,7 +24,10 @@ class SearchViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        noResultLabel.isHidden = true
     }
+
 }
 
 // MARK: - UISearchBarDelegate
@@ -46,6 +50,11 @@ extension SearchViewController: UISearchBarDelegate {
                 self.movies = movies
                 self.resultCollectionView.reloadData()
             }
+        }
+        if movies.count == 0 {
+            noResultLabel.isHidden = true
+        } else {
+            noResultLabel.isHidden = false
         }
     }
 }
