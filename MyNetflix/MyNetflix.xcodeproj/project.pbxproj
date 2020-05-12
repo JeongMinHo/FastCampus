@@ -31,6 +31,7 @@
 		E3E5728B246AD7C400670014 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E5728A246AD7C400670014 /* SearchList.storyboard */; };
 		E3E5728D246ADB3F00670014 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3E5728C246ADB3F00670014 /* GoogleService-Info.plist */; };
 		E3E5728F246AE50A00670014 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E5728E246AE50A00670014 /* SearchListCell.swift */; };
+		E3E57291246AE6F300670014 /* SearchTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E57290246AE6F300670014 /* SearchTerm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		E3E5728A246AD7C400670014 /* SearchList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchList.storyboard; sourceTree = "<group>"; };
 		E3E5728C246ADB3F00670014 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E3E5728E246AE50A00670014 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
+		E3E57290246AE6F300670014 /* SearchTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTerm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			children = (
 				E3E57288246AD77F00670014 /* SearchListViewController.swift */,
 				E3E5728E246AE50A00670014 /* SearchListCell.swift */,
+				E3E57290246AE6F300670014 /* SearchTerm.swift */,
 				E3E5728A246AD7C400670014 /* SearchList.storyboard */,
 			);
 			path = SearchList;
@@ -324,6 +327,7 @@
 				E3E57289246AD77F00670014 /* SearchListViewController.swift in Sources */,
 				E358B9B5245A0002008CEB0F /* SearchViewController.swift in Sources */,
 				E358B9B7245DE571008CEB0F /* RecommendListViewController.swift in Sources */,
+				E3E57291246AE6F300670014 /* SearchTerm.swift in Sources */,
 				E358B9C624607E62008CEB0F /* Response.swift in Sources */,
 				E358B9B9245DF109008CEB0F /* RecommendCell.swift in Sources */,
 				E3E5728F246AE50A00670014 /* SearchListCell.swift in Sources */,

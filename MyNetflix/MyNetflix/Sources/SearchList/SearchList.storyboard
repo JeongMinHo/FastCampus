@@ -40,8 +40,15 @@
                                         <constraints>
                                             <constraint firstItem="jRd-Fm-cOc" firstAttribute="centerY" secondItem="2a3-ST-VkJ" secondAttribute="centerY" id="2hz-dT-VNG"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="searchTerm" destination="jRd-Fm-cOc" id="GYC-GJ-q9R"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYB-el-800" id="JXB-SI-www"/>
+                                    <outlet property="delegate" destination="BYB-el-800" id="i1h-Ux-snI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
