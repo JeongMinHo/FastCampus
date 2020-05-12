@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nzt-Md-ozU">
+                            <searchBar contentMode="redraw" placeholder="검색" translatesAutoresizingMaskIntoConstraints="NO" id="nzt-Md-ozU">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -32,6 +32,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <view key="backgroundView" contentMode="scaleToFill" id="rvs-DN-ZAW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="713"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResultCell" id="reb-p1-PRR" customClass="ResultCell" customModule="MyNetflix" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="128" height="128"/>
@@ -61,6 +66,12 @@
                                     <outlet property="delegate" destination="Zoo-eC-zq3" id="Nl6-o8-1NA"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과가 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AK8-jC-L0s">
+                                <rect key="frame" x="134" y="437.5" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -70,6 +81,8 @@
                             <constraint firstItem="nzt-Md-ozU" firstAttribute="top" secondItem="31s-OW-i2m" secondAttribute="top" id="Nbk-Ju-0fJ"/>
                             <constraint firstItem="giz-uC-M1C" firstAttribute="top" secondItem="nzt-Md-ozU" secondAttribute="bottom" id="dme-CX-CyD"/>
                             <constraint firstItem="31s-OW-i2m" firstAttribute="trailing" secondItem="giz-uC-M1C" secondAttribute="trailing" id="fQP-Fj-3Dc"/>
+                            <constraint firstItem="AK8-jC-L0s" firstAttribute="centerY" secondItem="Wiq-I7-QOC" secondAttribute="centerY" id="jyG-6v-XeK"/>
+                            <constraint firstItem="AK8-jC-L0s" firstAttribute="centerX" secondItem="Wiq-I7-QOC" secondAttribute="centerX" id="obo-El-4qb"/>
                             <constraint firstItem="31s-OW-i2m" firstAttribute="bottom" secondItem="giz-uC-M1C" secondAttribute="bottom" id="zcv-OH-rrG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="31s-OW-i2m"/>
@@ -77,13 +90,14 @@
                     <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass" catalog="system" id="5OQ-ar-yUC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="noResultLabel" destination="AK8-jC-L0s" id="JcF-r0-hy5"/>
                         <outlet property="resultCollectionView" destination="giz-uC-M1C" id="ePE-cL-k0D"/>
                         <outlet property="searchBar" destination="nzt-Md-ozU" id="roJ-vA-xeL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEG-rj-Z1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="257.97101449275362" y="-206.25"/>
+            <point key="canvasLocation" x="345" y="-325"/>
         </scene>
     </scenes>
     <resources>
