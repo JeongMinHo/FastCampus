@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import AVFoundation
+import Firebase
 
 class SearchViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class SearchViewController: UIViewController {
     // MARK: - Value
     var movies: [Movie] = []
     var cellIdentifier: String = "ResultCell"
+    let db = Database.database().reference().child("searchHistory")
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -49,6 +51,9 @@ extension SearchViewController: UISearchBarDelegate {
             DispatchQueue.main.async {
                 self.movies = movies
                 self.resultCollectionView.reloadData()
+                
+                let timeStamp = Date().timeIntervalSince1970.rounded()
+                self.db.childByAutoId().setValue(["term": searchTerm, "timestamp": timeStamp])
             }
         }
         if movies.count == 0 {

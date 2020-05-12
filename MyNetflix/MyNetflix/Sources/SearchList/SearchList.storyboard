@@ -14,9 +14,48 @@
                     <view key="view" contentMode="scaleToFill" id="9AB-uI-BR7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-Xy-Kcx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchList" rowHeight="86" id="2a3-ST-VkJ" customClass="SearchListCell" customModule="MyNetflix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2a3-ST-VkJ" id="q6Z-Vi-uYt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRd-Fm-cOc">
+                                                    <rect key="frame" x="12" y="32.5" width="55" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jRd-Fm-cOc" firstAttribute="leading" secondItem="q6Z-Vi-uYt" secondAttribute="leading" constant="12" id="rwH-Fm-d0n"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="jRd-Fm-cOc" firstAttribute="centerY" secondItem="2a3-ST-VkJ" secondAttribute="centerY" id="2hz-dT-VNG"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qaa-Ma-Mfl" firstAttribute="trailing" secondItem="cPR-Xy-Kcx" secondAttribute="trailing" id="15v-fk-Hvo"/>
+                            <constraint firstAttribute="bottom" secondItem="cPR-Xy-Kcx" secondAttribute="bottom" id="4pT-yh-ODI"/>
+                            <constraint firstItem="cPR-Xy-Kcx" firstAttribute="top" secondItem="9AB-uI-BR7" secondAttribute="top" id="6AZ-qZ-vue"/>
+                            <constraint firstItem="cPR-Xy-Kcx" firstAttribute="leading" secondItem="Qaa-Ma-Mfl" secondAttribute="leading" id="98X-WL-NWr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Qaa-Ma-Mfl"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="cPR-Xy-Kcx" id="eyc-1c-zx7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7b-zJ-lV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

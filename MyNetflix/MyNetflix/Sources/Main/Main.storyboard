@@ -159,7 +159,7 @@
         <scene sceneID="2dS-hE-yDa">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="SearchList" storyboardName="SearchList" id="s8i-lI-3eq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="검색 목록" image="list.dash" catalog="system" id="xVG-hC-ngZ"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="검색 목록" image="list.dash" catalog="system" id="xVG-hC-ngZ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3D-BH-ZBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
