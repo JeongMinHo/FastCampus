@@ -9,15 +9,26 @@
 import UIKit
 import Firebase
 
-class SearchListViewController: UIViewController {
+protocol CellDelegate: class {
+    func deleteAndReloadData()
+}
+
+class SearchListViewController: UIViewController, CellDelegate {
+    
+    func deleteAndReloadData() {
+        self.tableView.reloadData()
+    }
     
     // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+ 
     // MARK: - Value
     let db = Database.database().reference().child("searchHistory")
     var searchTerms: [SearchTerm] = []
     var cellIdentifier: String = "SearchList"
+    var cellDelegate: CellDelegate?
+
     
     // MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -30,15 +41,19 @@ class SearchListViewController: UIViewController {
             
             let decoder = JSONDecoder()
             let searchTerms = try! decoder.decode([SearchTerm].self, from: data)
+            self.searchTerms = searchTerms.sorted(by: { (first, second) -> Bool in
+                first.timestamp > second.timestamp
+            })
             self.searchTerms = searchTerms
             self.tableView.reloadData()
         }
+        
+        deleteAndReloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(searchTerms)
+    
     }
 }
 
@@ -53,8 +68,6 @@ extension SearchListViewController: UITableViewDataSource {
         
         let dequeued = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         guard let cell = dequeued as? SearchListCell else { return dequeued}
-        
-        
         cell.searchTerm.text = searchTerms[indexPath.row].term
         
         return cell
