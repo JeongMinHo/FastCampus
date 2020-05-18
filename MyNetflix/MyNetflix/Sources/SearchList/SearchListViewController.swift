@@ -11,24 +11,20 @@ import Firebase
 
 protocol CellDelegate: class {
     func deleteAndReloadData()
+    func delete(search: String)
 }
 
-class SearchListViewController: UIViewController, CellDelegate {
-    
-    func deleteAndReloadData() {
-        self.tableView.reloadData()
-    }
+class SearchListViewController: UIViewController {
     
     // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
- 
     // MARK: - Value
     let db = Database.database().reference().child("searchHistory")
     var searchTerms: [SearchTerm] = []
     var cellIdentifier: String = "SearchList"
     var cellDelegate: CellDelegate?
-
+    var dataManager = FirebaseManager()
     
     // MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +44,6 @@ class SearchListViewController: UIViewController, CellDelegate {
             self.tableView.reloadData()
         }
         
-        deleteAndReloadData()
     }
     
     override func viewDidLoad() {
@@ -67,8 +62,9 @@ extension SearchListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let dequeued = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        guard let cell = dequeued as? SearchListCell else { return dequeued}
+        guard let cell = dequeued as? SearchListCell else { return dequeued }
         cell.searchTerm.text = searchTerms[indexPath.row].term
+        cell.cellDelegate = self
         
         return cell
     }
@@ -78,3 +74,17 @@ extension SearchListViewController: UITableViewDataSource {
 extension SearchListViewController: UITableViewDelegate {
     
 }
+
+// MARK: - CellDelegate
+extension SearchListViewController: CellDelegate {
+
+    func delete(search: String) {
+//        dataManager.removeData(db.child("minho"))
+    }
+    
+    func deleteAndReloadData() {
+        self.tableView.reloadData()
+    }
+}
+
+ 

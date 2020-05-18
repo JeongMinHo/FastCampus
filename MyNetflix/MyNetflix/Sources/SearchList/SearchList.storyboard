@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search List View Controller-->
+        <!--검색 목록-->
         <scene sceneID="vEa-ke-R8X">
             <objects>
                 <viewController storyboardIdentifier="SearchList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYB-el-800" customClass="SearchListViewController" customModule="MyNetflix" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,6 +83,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qaa-Ma-Mfl"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="검색 목록" image="list.dash" catalog="system" id="Szw-qO-UjM"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="cPR-Xy-Kcx" id="eyc-1c-zx7"/>
                     </connections>
@@ -94,5 +96,6 @@
     </scenes>
     <resources>
         <image name="delete.right" catalog="system" width="128" height="104"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
     </resources>
 </document>

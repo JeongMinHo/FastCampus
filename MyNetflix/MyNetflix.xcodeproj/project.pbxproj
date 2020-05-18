@@ -32,6 +32,7 @@
 		E3E5728D246ADB3F00670014 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3E5728C246ADB3F00670014 /* GoogleService-Info.plist */; };
 		E3E5728F246AE50A00670014 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E5728E246AE50A00670014 /* SearchListCell.swift */; };
 		E3E57291246AE6F300670014 /* SearchTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E57290246AE6F300670014 /* SearchTerm.swift */; };
+		E3E572B4246D257F00670014 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E572B3246D257F00670014 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		E3E5728C246ADB3F00670014 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E3E5728E246AE50A00670014 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
 		E3E57290246AE6F300670014 /* SearchTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTerm.swift; sourceTree = "<group>"; };
+		E3E572B3246D257F00670014 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		E38890912456C5E100DAACAB /* MyNetflix */ = {
 			isa = PBXGroup;
 			children = (
+				E3E572B2246D256700670014 /* Extensions */,
 				E358B9AB2459EEBB008CEB0F /* Sources */,
 				E358B9AA2459EEB9008CEB0F /* Supporting Files */,
 				E388909D2456C5E300DAACAB /* LaunchScreen.storyboard */,
@@ -191,6 +194,14 @@
 				E3E5728A246AD7C400670014 /* SearchList.storyboard */,
 			);
 			path = SearchList;
+			sourceTree = "<group>";
+		};
+		E3E572B2246D256700670014 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3E572B3246D257F00670014 /* FirebaseManager.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +345,7 @@
 				E35B61EA24685DA1006849D5 /* NoResultViewController.swift in Sources */,
 				E358B9BB245DF3AE008CEB0F /* HomeViewController.swift in Sources */,
 				E38890952456C5E100DAACAB /* SceneDelegate.swift in Sources */,
+				E3E572B4246D257F00670014 /* FirebaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
