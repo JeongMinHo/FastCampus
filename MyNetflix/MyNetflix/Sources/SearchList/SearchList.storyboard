@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYB-el-800">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--검색 목록-->
+        <scene sceneID="vEa-ke-R8X">
+            <objects>
+                <viewController storyboardIdentifier="SearchList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYB-el-800" customClass="SearchListViewController" customModule="MyNetflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9AB-uI-BR7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-Xy-Kcx">
+                                <rect key="frame" x="0.0" y="65" width="414" height="831"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchList" rowHeight="86" id="2a3-ST-VkJ" customClass="SearchListCell" customModule="MyNetflix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2a3-ST-VkJ" id="q6Z-Vi-uYt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRd-Fm-cOc">
+                                                    <rect key="frame" x="12" y="32.5" width="55" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5u8-g2-bZd">
+                                                    <rect key="frame" x="374" y="17" width="20" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="fjQ-eZ-qz4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <state key="normal" image="delete.right" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deleteSearchList:" destination="2a3-ST-VkJ" eventType="touchUpInside" id="c8s-GR-M5n"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="5u8-g2-bZd" secondAttribute="bottom" constant="17" id="HbS-N4-Or9"/>
+                                                <constraint firstAttribute="trailing" secondItem="5u8-g2-bZd" secondAttribute="trailing" constant="20" id="RFp-Nf-f9z"/>
+                                                <constraint firstItem="5u8-g2-bZd" firstAttribute="top" secondItem="q6Z-Vi-uYt" secondAttribute="top" constant="17" id="pgJ-pW-rBz"/>
+                                                <constraint firstItem="jRd-Fm-cOc" firstAttribute="leading" secondItem="q6Z-Vi-uYt" secondAttribute="leading" constant="12" id="rwH-Fm-d0n"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="jRd-Fm-cOc" firstAttribute="centerY" secondItem="2a3-ST-VkJ" secondAttribute="centerY" id="2hz-dT-VNG"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="searchTerm" destination="jRd-Fm-cOc" id="GYC-GJ-q9R"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYB-el-800" id="JXB-SI-www"/>
+                                    <outlet property="delegate" destination="BYB-el-800" id="i1h-Ux-snI"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색목록" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxs-aI-DIY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qaa-Ma-Mfl" firstAttribute="trailing" secondItem="cPR-Xy-Kcx" secondAttribute="trailing" id="15v-fk-Hvo"/>
+                            <constraint firstItem="cPR-Xy-Kcx" firstAttribute="top" secondItem="pxs-aI-DIY" secondAttribute="bottom" id="3ji-Wu-Vvh"/>
+                            <constraint firstAttribute="bottom" secondItem="cPR-Xy-Kcx" secondAttribute="bottom" id="4pT-yh-ODI"/>
+                            <constraint firstItem="pxs-aI-DIY" firstAttribute="top" secondItem="Qaa-Ma-Mfl" secondAttribute="top" id="8ja-Iv-nGy"/>
+                            <constraint firstItem="cPR-Xy-Kcx" firstAttribute="leading" secondItem="Qaa-Ma-Mfl" secondAttribute="leading" id="98X-WL-NWr"/>
+                            <constraint firstItem="Qaa-Ma-Mfl" firstAttribute="trailing" secondItem="pxs-aI-DIY" secondAttribute="trailing" id="Lev-xO-dyN"/>
+                            <constraint firstItem="pxs-aI-DIY" firstAttribute="leading" secondItem="Qaa-Ma-Mfl" secondAttribute="leading" id="zzK-Dm-0aa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qaa-Ma-Mfl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="검색 목록" image="list.dash" catalog="system" id="Szw-qO-UjM"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="cPR-Xy-Kcx" id="eyc-1c-zx7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7b-zJ-lV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668.11594202898561" y="37.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete.right" catalog="system" width="128" height="104"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+    </resources>
+</document>
